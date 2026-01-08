@@ -1,0 +1,3363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Medlead Healthcare Ltd | Premier Medical Services in Kenya</title>
+    <meta name="description" content="Leading healthcare provider in Kenya offering medical supplies, home-based care, diagnostics, and pharmaceutical services">
+    <meta name="keywords" content="hospital, medical supplies, healthcare, Kenya, diagnostics, home care, pharmacy">
+    <link rel="icon" href="assets/img/LOGO_H-removebg-preview.png" type="image/png">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        /* ===== CUSTOM CSS VARIABLES ===== */
+        :root {
+            --primary-blue: #0078d7;
+            --dark-blue: #0056b3;
+            --light-blue: #e3f2fd;
+            --accent-teal: #00a8e8;
+            --emergency-red: #dc3545;
+            --success-green: #28a745;
+            --warning-orange: #ffc107;
+            --text-dark: #212529;
+            --text-gray: #666;
+            --light-gray: #f8f9fa;
+            --border-color: #dee2e6;
+            --shadow-sm: 0 2px 10px rgba(0,0,0,0.08);
+            --shadow-md: 0 5px 20px rgba(0,0,0,0.12);
+            --shadow-lg: 0 10px 30px rgba(0,0,0,0.15);
+            --transition: all 0.3s ease;
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 20px;
+            --header-height: 80px;
+        }
+
+        /* ===== BASE STYLES ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: var(--header-height);
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+            padding-top: var(--header-height);
+            width: 100%;
+            position: relative;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 0.8rem;
+        }
+
+        h1 { font-size: 2rem; }
+        h2 { font-size: 1.75rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        h5 { font-size: 1.1rem; }
+        h6 { font-size: 1rem; }
+
+        p, li, span, a, div {
+            font-size: 0.95rem;
+        }
+
+        .lead {
+            font-size: 1.05rem;
+        }
+
+        a {
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .section-padding {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--dark-blue);
+            position: relative;
+            display: inline-block;
+            margin-bottom: 1.2rem;
+        }
+
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70px;
+            height: 3px;
+            background: var(--accent-teal);
+            border-radius: 2px;
+        }
+
+        .section-title p {
+            color: var(--text-gray);
+            font-size: 1rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* ===== BUTTONS ===== */
+        .btn-primary-custom {
+            background: linear-gradient(135deg, var(--primary-blue), var(--accent-teal));
+            color: white;
+            padding: 10px 28px;
+            border-radius: var(--radius-lg);
+            font-weight: 600;
+            border: none;
+            transition: var(--transition);
+            box-shadow: var(--shadow-sm);
+            font-size: 0.9rem;
+        }
+
+        .btn-primary-custom:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+            background: linear-gradient(135deg, var(--dark-blue), var(--primary-blue));
+            color: white;
+        }
+
+        .btn-secondary-custom {
+            background: transparent;
+            color: var(--primary-blue);
+            padding: 10px 28px;
+            border-radius: var(--radius-lg);
+            font-weight: 600;
+            border: 2px solid var(--primary-blue);
+            transition: var(--transition);
+            font-size: 0.9rem;
+        }
+
+        .btn-secondary-custom:hover {
+            background: var(--primary-blue);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .btn-emergency {
+            background: var(--emergency-red);
+            color: white;
+            padding: 10px 28px;
+            border-radius: var(--radius-lg);
+            font-weight: 600;
+            border: none;
+            transition: var(--transition);
+            box-shadow: var(--shadow-sm);
+            animation: pulse 2s infinite;
+            font-size: 0.9rem;
+        }
+
+        .btn-emergency:hover {
+            background: #c82333;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(220, 53, 69, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(220, 53, 69, 0); }
+        }
+
+        /* ===== HEADER & NAVBAR ===== */
+        .main-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            box-shadow: var(--shadow-sm);
+            z-index: 1000;
+            height: var(--header-height);
+            transition: var(--transition);
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .main-header.scrolled {
+            box-shadow: var(--shadow-md);
+        }
+
+        .navbar {
+            padding: 10px 0;
+        }
+
+        .navbar-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-right: 85px;
+        }
+
+        .logo-img {
+            height: 55px;
+            width: auto;
+        }
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--dark-blue);
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        .brand-tagline {
+            font-size: 0.8rem;
+            color: var(--text-gray);
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-left: auto;
+        }
+
+        .nav-link {
+            color: var(--text-dark);
+            font-weight: 500;
+            padding: 10px 15px;
+            border-radius: var(--radius-sm);
+            position: relative;
+            font-size: 0.9rem;
+            white-space: nowrap;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--primary-blue);
+        }
+
+        .nav-link.active:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 15px;
+            right: 15px;
+            height: 2px;
+            background: var(--primary-blue);
+            border-radius: 2px;
+        }
+
+        .navbar-toggler {
+            display: none;
+            border: none;
+            background: none;
+            font-size: 1.5rem;
+            color: var(--primary-blue);
+            cursor: pointer;
+            padding: 5px;
+            margin-left: 15px;
+            z-index: 1001;
+        }
+
+        .emergency-contact {
+            background: var(--emergency-red);
+            color: white;
+            padding: 8px 16px;
+            border-radius: var(--radius-lg);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.85rem;
+            white-space: nowrap;
+            margin-left: 15px;
+        }
+
+        .emergency-contact:hover {
+            background: #c82333;
+            color: white;
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero-section {
+            background: linear-gradient(rgba(0, 86, 179, 0.85), rgba(0, 120, 215, 0.8)), url('assets/img/hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            max-width: 700px;
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+        }
+
+        .hero-description {
+            font-size: 1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .hero-features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 40px;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: var(--radius-md);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-3px);
+            background: rgba(255, 255, 255, 0.25);
+            box-shadow: var(--shadow-md);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .feature-card h4 {
+            font-size: 1rem;
+            margin-bottom: 8px;
+            color: white;
+        }
+
+        .feature-card p {
+            font-size: 0.85rem;
+            margin-bottom: 0;
+            opacity: 0.9;
+        }
+
+        /* ===== ABOUT SECTION ===== */
+        .about-section {
+            background: var(--light-gray);
+        }
+
+        .about-content {
+            padding-right: 20px;
+        }
+
+        .about-image-container {
+            position: relative;
+        }
+
+        .about-image {
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            height: 100%;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            min-height: 400px;
+            transition: transform 0.5s ease;
+        }
+
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .mission-vision-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .mv-card {
+            background: white;
+            padding: 25px;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            border-top: 3px solid var(--primary-blue);
+            transition: var(--transition);
+        }
+
+        .mv-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .mv-icon {
+            font-size: 2rem;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+        }
+
+        .mv-card h4 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .mv-card p {
+            font-size: 0.9rem;
+            margin-bottom: 0;
+        }
+
+        .core-values {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .value-badge {
+            background: var(--light-blue);
+            color: var(--dark-blue);
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-weight: 500;
+            border: 1px solid var(--primary-blue);
+            font-size: 0.85rem;
+        }
+
+        /* ===== SERVICES SECTION ===== */
+        .services-section {
+            background: white;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            border: 1px solid var(--border-color);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--primary-blue);
+        }
+
+        .service-icon-container {
+            height: 100px;
+            background: var(--light-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+        }
+
+        .service-info {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-info h4 {
+            color: var(--dark-blue);
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .service-info p {
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+            color: var(--text-gray);
+            flex-grow: 1;
+        }
+
+        .service-features {
+            margin-top: 15px;
+        }
+
+        .service-features li {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .service-features li:before {
+            content: '✓';
+            color: var(--success-green);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* ===== DEPARTMENTS SECTION ===== */
+        .departments-section {
+            background: var(--light-gray);
+        }
+
+        .departments-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .department-card {
+            background: white;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            border: 1px solid var(--border-color);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .department-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--primary-blue);
+        }
+
+        .department-icon-container {
+            height: 120px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--accent-teal));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .department-icon {
+            font-size: 3rem;
+            color: white;
+        }
+
+        .department-info {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .department-info h4 {
+            color: var(--dark-blue);
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .department-info p {
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+            color: var(--text-gray);
+            flex-grow: 1;
+        }
+
+        /* ===== STAFF SECTION ===== */
+        .staff-section {
+            background: white;
+        }
+
+        .staff-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .staff-card {
+            background: white;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            border: 1px solid var(--border-color);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .staff-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--primary-blue);
+        }
+
+        .staff-image-container {
+            height: 250px;
+            overflow: hidden;
+            background: #f8f9fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .staff-image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transition: transform 0.5s ease;
+        }
+
+        .staff-card:hover .staff-image {
+            transform: scale(1.05);
+        }
+
+        .staff-info {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .staff-info h4 {
+            color: var(--dark-blue);
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+
+        .staff-role {
+            color: var(--primary-blue);
+            font-weight: 500;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+
+        .staff-info p {
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            color: var(--text-gray);
+            flex-grow: 1;
+        }
+
+        .staff-social {
+            display: flex;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .staff-social a {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: var(--light-blue);
+            color: var(--primary-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            font-size: 0.9rem;
+        }
+
+        .staff-social a:hover {
+            background: var(--primary-blue);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* ===== PRODUCTS SECTION ===== */
+        .products-section {
+            background: var(--light-gray);
+        }
+
+        .gallery-filter {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 30px;
+        }
+
+        .filter-btn {
+            background: white;
+            border: 1px solid var(--border-color);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-weight: 500;
+            color: var(--text-dark);
+            transition: var(--transition);
+            font-size: 0.85rem;
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background: var(--primary-blue);
+            color: white;
+            border-color: var(--primary-blue);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            position: relative;
+            border: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-blue);
+        }
+
+        .product-image-container {
+            height: 220px;
+            overflow: hidden;
+            background: #f8f9fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transition: transform 0.5s ease;
+        }
+
+        .product-card:hover .product-image {
+            transform: scale(1.05);
+        }
+
+        .product-info {
+            padding: 15px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-info h4 {
+            font-size: 1rem;
+            margin-bottom: 8px;
+            color: var(--text-dark);
+            line-height: 1.3;
+            min-height: 40px;
+        }
+
+        .product-price {
+            color: var(--primary-blue);
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .whatsapp-btn {
+            background: #25D366;
+            color: white;
+            width: 100%;
+            padding: 8px;
+            border: none;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            transition: var(--transition);
+            font-size: 0.85rem;
+            margin-top: auto;
+        }
+
+        .whatsapp-btn:hover {
+            background: #128C7E;
+            color: white;
+        }
+
+        /* ===== CONTACT SECTION ===== */
+        .contact-section {
+            background: linear-gradient(rgba(0, 86, 179, 0.9), rgba(0, 120, 215, 0.9));
+            color: white;
+        }
+
+        .contact-form-container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: var(--radius-md);
+            padding: 30px;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .contact-form-container h3 {
+            color: var(--dark-blue);
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+
+        .form-control {
+            padding: 10px 12px;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            margin-bottom: 15px;
+            transition: var(--transition);
+            font-size: 0.9rem;
+        }
+
+        .form-control:focus {
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 0.2rem rgba(0, 120, 215, 0.25);
+        }
+
+        .contact-info {
+            padding-left: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .contact-icon {
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+
+        .contact-item h4 {
+            color: white;
+            font-size: 1rem;
+            margin-bottom: 5px;
+        }
+
+        .contact-item p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-bottom: 0;
+        }
+
+        /* ===== FOOTER ===== */
+        .main-footer {
+            background: var(--text-dark);
+            color: white;
+            padding: 50px 0 20px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 15px;
+        }
+
+        .footer-logo img {
+            height: 45px;
+            width: auto;
+        }
+
+        .footer-brand h3 {
+            color: white;
+            font-size: 1.2rem;
+            margin-bottom: 3px;
+        }
+
+        .footer-brand p {
+            font-size: 0.8rem;
+            color: #adb5bd;
+            margin-bottom: 0;
+        }
+
+        .footer-links h5 {
+            color: white;
+            font-size: 1rem;
+            margin-bottom: 15px;
+            position: relative;
+            padding-bottom: 8px;
+        }
+
+        .footer-links h5:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 35px;
+            height: 2px;
+            background: var(--primary-blue);
+        }
+
+        .footer-links ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-links ul li a {
+            color: #adb5bd;
+            transition: var(--transition);
+            font-size: 0.9rem;
+        }
+
+        .footer-links ul li a:hover {
+            color: white;
+            padding-left: 3px;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .footer-social a {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            font-size: 0.9rem;
+        }
+
+        .footer-social a:hover {
+            background: var(--primary-blue);
+            transform: translateY(-2px);
+        }
+
+        .footer-newsletter {
+            margin-top: 20px;
+        }
+
+        .footer-newsletter .input-group {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+        }
+
+        .footer-newsletter input {
+            background: transparent;
+            border: none;
+            color: white;
+            padding: 8px 12px;
+            font-size: 0.9rem;
+        }
+
+        .footer-newsletter input::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .footer-newsletter button {
+            background: var(--primary-blue);
+            border: none;
+            color: white;
+            padding: 8px 15px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+            margin-top: 30px;
+            text-align: center;
+            color: #adb5bd;
+            font-size: 0.85rem;
+        }
+
+        /* ===== UTILITY CLASSES ===== */
+        .text-gradient {
+            background: linear-gradient(135deg, var(--primary-blue), var(--accent-teal));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .bg-light-blue {
+            background-color: var(--light-blue) !important;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary-blue);
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: var(--text-gray);
+        }
+
+        /* ===== FLOATING BUTTONS FIX ===== */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 55px;
+            height: 55px;
+            background: #25D366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: var(--shadow-lg);
+            z-index: 100;
+            transition: var(--transition);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .floating-whatsapp:hover {
+            background: #128C7E;
+            transform: scale(1.1);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        .scroll-top {
+            position: fixed;
+            bottom: 90px;
+            right: 25px;
+            width: 45px;
+            height: 45px;
+            background: var(--primary-blue);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            box-shadow: var(--shadow-md);
+            z-index: 99;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+
+        .scroll-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-top:hover {
+            background: var(--dark-blue);
+            transform: translateY(-3px);
+        }
+
+        /* Fix for staff and product image placeholders */
+        .image-placeholder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+            background: #f8f9fa;
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Container fix */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            width: 100%;
+        }
+
+        /* ===== RESPONSIVE DESIGN ===== */
+        @media (max-width: 1200px) {
+            .hero-title {
+                font-size: 2.2rem;
+            }
+            
+            .section-padding {
+                padding: 50px 0;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+            
+            .about-content {
+                padding-right: 0;
+                margin-bottom: 30px;
+            }
+            
+            .contact-info {
+                padding-left: 0;
+                margin-top: 30px;
+            }
+            
+            .hero-section {
+                min-height: 75vh;
+            }
+            
+            /* MOBILE NAVIGATION FIX */
+            .navbar-toggler {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 280px;
+                height: 100vh;
+                background: white;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                padding: 100px 30px 30px;
+                box-shadow: var(--shadow-lg);
+                transition: right 0.4s ease;
+                z-index: 1000;
+                margin: 0;
+                overflow-y: auto;
+            }
+            
+            .nav-links.active {
+                right: 0;
+            }
+            
+            .nav-link {
+                width: 100%;
+                padding: 15px 0;
+                border-bottom: 1px solid var(--border-color);
+                font-size: 1rem;
+            }
+            
+            .emergency-contact {
+                margin: 20px 0 0;
+                width: 100%;
+                justify-content: center;
+                padding: 12px;
+            }
+            
+            .navbar-overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.5);
+                display: none;
+                z-index: 999;
+            }
+            
+            .navbar-overlay.active {
+                display: block;
+            }
+            
+            /* Adjust floating buttons for mobile */
+            .floating-whatsapp {
+                width: 50px;
+                height: 50px;
+                font-size: 1.3rem;
+                bottom: 20px;
+                right: 20px;
+            }
+            
+            .scroll-top {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+                bottom: 80px;
+                right: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding-top: 70px;
+            }
+            
+            .main-header {
+                height: 70px;
+            }
+            
+            .logo-img {
+                height: 45px;
+            }
+            
+            .brand-name {
+                font-size: 1.1rem;
+            }
+            
+            .brand-tagline {
+                font-size: 0.75rem;
+            }
+            
+            .hero-title {
+                font-size: 1.8rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .hero-buttons .btn {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+            
+            .hero-features {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+            
+            .feature-card {
+                padding: 15px;
+            }
+            
+            .section-padding {
+                padding: 40px 0;
+            }
+            
+            .section-title {
+                margin-bottom: 40px;
+            }
+            
+            .navbar-container {
+                padding: 0 15px;
+            }
+            
+            /* Services and Departments grid */
+            .services-grid,
+            .departments-grid,
+            .staff-grid,
+            .products-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            body {
+                font-size: 0.9rem;
+            }
+            
+            .hero-title {
+                font-size: 1.6rem;
+            }
+            
+            .section-title h2 {
+                font-size: 1.6rem;
+            }
+            
+            .contact-form-container {
+                padding: 20px;
+            }
+            
+            .services-grid,
+            .departments-grid,
+            .staff-grid,
+            .products-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            /* Fix for very small screens */
+            .container {
+                padding: 0 15px;
+            }
+            
+            .gallery-filter {
+                gap: 5px;
+            }
+            
+            .filter-btn {
+                padding: 5px 12px;
+                font-size: 0.8rem;
+            }
+            
+            /* Further adjust floating buttons */
+            .floating-whatsapp {
+                width: 45px;
+                height: 45px;
+                font-size: 1.2rem;
+                bottom: 15px;
+                right: 15px;
+            }
+            
+            .scroll-top {
+                width: 35px;
+                height: 35px;
+                font-size: 0.9rem;
+                bottom: 70px;
+                right: 15px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .navbar-brand {
+                gap: 10px;
+            }
+            
+            .logo-img {
+                height: 40px;
+            }
+            
+            .brand-name {
+                font-size: 1rem;
+            }
+            
+            .brand-tagline {
+                font-size: 0.7rem;
+            }
+            
+            .hero-title {
+                font-size: 1.4rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+        }
+
+        /* Prevent horizontal scrolling */
+        .row {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        /* Ensure all sections don't overflow */
+        section {
+            width: 100%;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/254790055027" class="floating-whatsapp" target="_blank" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scroll to Top -->
+    <a href="#" class="scroll-top" title="Back to Top">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <!-- Header & Navigation -->
+    <header class="main-header">
+        <div class="navbar-container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#home">
+                <img src="assets/img/LOGO_H-removebg-preview.png" alt="Medlead Healthcare Logo" class="logo-img">
+                <div class="brand-text">
+                    <div class="brand-name">Medlead Healthcare</div>
+                    <div class="brand-tagline">Quality Healthcare Solutions</div>
+                </div>
+            </a>
+
+            <!-- Navigation Links -->
+            <div class="nav-links" id="navLinks">
+                <a class="nav-link active" href="#home">Home</a>
+                <a class="nav-link" href="#about">About</a>
+                <a class="nav-link" href="#services">Services</a>
+                <a class="nav-link" href="#departments">Departments</a>
+                <a class="nav-link" href="#staff">Staff</a>
+                <a class="nav-link" href="#products">Products</a>
+                <a class="nav-link" href="#contact">Contact</a>
+                <a href="tel:+254793285847" class="emergency-contact">
+                    <i class="fas fa-phone-alt me-1"></i> Emergency: 0793 285 847
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="navbar-toggler" id="navbarToggler">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Overlay -->
+        <div class="navbar-overlay" id="navbarOverlay"></div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section section-padding">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7" data-aos="fade-right">
+                    <div class="hero-content">
+                        <h1 class="hero-title">Welcome to Medlead Healthcare</h1>
+                        <p class="hero-subtitle">Your Trusted Partner in Quality Healthcare Solutions</p>
+                        <p class="hero-description">
+                            We provide comprehensive medical services including diagnostic equipment, 
+                            home-based care, pharmaceutical services, and medical supplies across Kenya. 
+                            Our commitment is to deliver excellence in healthcare with compassion and innovation.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="#services" class="btn btn-primary-custom">
+                                <i class="fas fa-stethoscope me-2"></i>Our Services
+                            </a>
+                            <a href="#contact" class="btn btn-secondary-custom">
+                                <i class="fas fa-calendar-check me-2"></i>Book Appointment
+                            </a>
+                            <a href="tel:+254793285847" class="btn btn-emergency">
+                                <i class="fas fa-phone-alt me-2"></i>Emergency Call
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5" data-aos="fade-left">
+                    <div class="hero-features">
+                        <div class="feature-card">
+                            <i class="fas fa-shield-alt feature-icon"></i>
+                            <h4>Certified Quality</h4>
+                            <p>All products meet international standards</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-truck feature-icon"></i>
+                            <h4>Nationwide Delivery</h4>
+                            <p>Fast delivery across Kenya</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-user-md feature-icon"></i>
+                            <h4>Expert Staff</h4>
+                            <p>Professional healthcare team</p>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-heartbeat feature-icon"></i>
+                            <h4>Compassionate Care</h4>
+                            <p>Patient-centered approach</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section section-padding">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>About Medlead Healthcare</h2>
+                <p>Leading the way in healthcare innovation and compassionate service delivery</p>
+            </div>
+
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="about-image-container">
+                        <div class="about-image">
+                            <img src="assets/img/gallery/Hb machines.jpg" alt="Medical Equipment">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="about-content">
+                        <h3 class="text-gradient">Transforming Healthcare in Kenya</h3>
+                        <p class="mb-4">
+                            Medlead Healthcare is a rapidly growing medical supply company dedicated to 
+                            enhancing healthcare delivery across Kenya. We specialize in providing 
+                            high-quality laboratory equipment, diagnostic kits, and medical consumables 
+                            to hospitals, clinics, and healthcare facilities nationwide.
+                        </p>
+                        
+                        <div class="mission-vision-grid">
+                            <div class="mv-card">
+                                <i class="fas fa-eye mv-icon"></i>
+                                <h4>Our Vision</h4>
+                                <p>To be a premier healthcare solutions provider in Africa, transforming lives through innovation, quality, and compassion.</p>
+                            </div>
+                            <div class="mv-card">
+                                <i class="fas fa-bullseye mv-icon"></i>
+                                <h4>Our Mission</h4>
+                                <p>Improve access to quality healthcare by offering reliable medical products, pharmaceutical services, and personalized care.</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-4">
+                            <h5>Core Values</h5>
+                            <div class="core-values">
+                                <span class="value-badge">Integrity</span>
+                                <span class="value-badge">Excellence</span>
+                                <span class="value-badge">Innovation</span>
+                                <span class="value-badge">Compassion</span>
+                                <span class="value-badge">Teamwork</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Counter -->
+            <div class="row mt-5 pt-5" data-aos="fade-up">
+                <div class="col-md-3 col-6 text-center">
+                    <div class="stat-number" data-count="150">0</div>
+                    <div class="stat-label">Products</div>
+                </div>
+                <div class="col-md-3 col-6 text-center">
+                    <div class="stat-number" data-count="85">0</div>
+                    <div class="stat-label">Medical Staff</div>
+                </div>
+                <div class="col-md-3 col-6 text-center">
+                    <div class="stat-number" data-count="18">0</div>
+                    <div class="stat-label">Departments</div>
+                </div>
+                <div class="col-md-3 col-6 text-center">
+                    <div class="stat-number" data-count="5000">0</div>
+                    <div class="stat-label">Patients Served</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section section-padding">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Our Healthcare Services</h2>
+                <p>Comprehensive medical services tailored to meet your healthcare needs</p>
+            </div>
+
+            <div class="services-grid" data-aos="fade-up" data-aos-delay="100">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <div class="service-icon-container">
+                        <i class="fas fa-pills service-icon"></i>
+                    </div>
+                    <div class="service-info">
+                        <h4>Pharmaceutical Services</h4>
+                        <p>Complete pharmacy solutions including prescription medications, over-the-counter drugs, and medical supplies.</p>
+                        <ul class="service-features">
+                            <li>Prescription filling & dispensing</li>
+                            <li>Over-the-counter medications</li>
+                            <li>Medical consumables supply</li>
+                            <li>Pharmacy consultations</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary-custom mt-3">Request Service</a>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <div class="service-icon-container">
+                        <i class="fas fa-home service-icon"></i>
+                    </div>
+                    <div class="service-info">
+                        <h4>Home-Based Care</h4>
+                        <p>Professional medical care delivered to your home by qualified healthcare professionals.</p>
+                        <ul class="service-features">
+                            <li>Nursing care at home</li>
+                            <li>Elderly care services</li>
+                            <li>Post-operative care</li>
+                            <li>Chronic disease management</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary-custom mt-3">Request Service</a>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <div class="service-icon-container">
+                        <i class="fas fa-flask service-icon"></i>
+                    </div>
+                    <div class="service-info">
+                        <h4>Diagnostic Services</h4>
+                        <p>Advanced laboratory testing and diagnostic procedures using state-of-the-art equipment.</p>
+                        <ul class="service-features">
+                            <li>Blood tests & analysis</li>
+                            <li>Imaging services</li>
+                            <li>Pathology services</li>
+                            <li>Rapid diagnostic tests</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary-custom mt-3">Request Service</a>
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card">
+                    <div class="service-icon-container">
+                        <i class="fas fa-truck-medical service-icon"></i>
+                    </div>
+                    <div class="service-info">
+                        <h4>Medical Equipment Supply</h4>
+                        <p>Providing hospitals and clinics with high-quality medical equipment and supplies.</p>
+                        <ul class="service-features">
+                            <li>Hospital equipment</li>
+                            <li>Laboratory instruments</li>
+                            <li>Surgical instruments</li>
+                            <li>Maintenance & support</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary-custom mt-3">Request Service</a>
+                    </div>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="service-card">
+                    <div class="service-icon-container">
+                        <i class="fas fa-ambulance service-icon"></i>
+                    </div>
+                    <div class="service-info">
+                        <h4>Emergency Medical Services</h4>
+                        <p>24/7 emergency response and medical transportation services.</p>
+                        <ul class="service-features">
+                            <li>Emergency response</li>
+                            <li>Patient transportation</li>
+                            <li>Ambulance services</li>
+                            <li>First aid support</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary-custom mt-3">Request Service</a>
+                    </div>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="service-card">
+                    <div class="service-icon-container">
+                        <i class="fas fa-user-md service-icon"></i>
+                    </div>
+                    <div class="service-info">
+                        <h4>Consultation Services</h4>
+                        <p>Professional medical consultations with experienced healthcare providers.</p>
+                        <ul class="service-features">
+                            <li>General consultations</li>
+                            <li>Specialist referrals</li>
+                            <li>Telemedicine services</li>
+                            <li>Health screenings</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary-custom mt-3">Request Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Departments Section -->
+    <section id="departments" class="departments-section section-padding">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Our Medical Departments</h2>
+                <p>Specialized healthcare departments providing comprehensive medical care</p>
+            </div>
+
+            <div class="departments-grid" data-aos="fade-up" data-aos-delay="100">
+                <!-- Department 1 -->
+                <div class="department-card">
+                    <div class="department-icon-container">
+                        <i class="fas fa-heart department-icon"></i>
+                    </div>
+                    <div class="department-info">
+                        <h4>Cardiology</h4>
+                        <p>Comprehensive heart care including diagnosis, treatment, and prevention of cardiovascular diseases.</p>
+                        <a href="#contact" class="btn btn-secondary-custom mt-3">Contact Department</a>
+                    </div>
+                </div>
+
+                <!-- Department 2 -->
+                <div class="department-card">
+                    <div class="department-icon-container">
+                        <i class="fas fa-brain department-icon"></i>
+                    </div>
+                    <div class="department-info">
+                        <h4>Neurology</h4>
+                        <p>Specialized care for disorders of the nervous system, including brain and spinal cord conditions.</p>
+                        <a href="#contact" class="btn btn-secondary-custom mt-3">Contact Department</a>
+                    </div>
+                </div>
+
+                <!-- Department 3 -->
+                <div class="department-card">
+                    <div class="department-icon-container">
+                        <i class="fas fa-baby department-icon"></i>
+                    </div>
+                    <div class="department-info">
+                        <h4>Pediatrics</h4>
+                        <p>Dedicated healthcare for children from infancy through adolescence.</p>
+                        <a href="#contact" class="btn btn-secondary-custom mt-3">Contact Department</a>
+                    </div>
+                </div>
+
+                <!-- Department 4 -->
+                <div class="department-card">
+                    <div class="department-icon-container">
+                        <i class="fas fa-female department-icon"></i>
+                    </div>
+                    <div class="department-info">
+                        <h4>Gynecology</h4>
+                        <p>Women's health services including reproductive health, pregnancy, and childbirth care.</p>
+                        <a href="#contact" class="btn btn-secondary-custom mt-3">Contact Department</a>
+                    </div>
+                </div>
+
+                <!-- Department 5 -->
+                <div class="department-card">
+                    <div class="department-icon-container">
+                        <i class="fas fa-bone department-icon"></i>
+                    </div>
+                    <div class="department-info">
+                        <h4>Orthopedics</h4>
+                        <p>Diagnosis and treatment of musculoskeletal system disorders, including bones and joints.</p>
+                        <a href="#contact" class="btn btn-secondary-custom mt-3">Contact Department</a>
+                    </div>
+                </div>
+
+                <!-- Department 6 -->
+                <div class="department-card">
+                    <div class="department-icon-container">
+                        <i class="fas fa-eye department-icon"></i>
+                    </div>
+                    <div class="department-info">
+                        <h4>Ophthalmology</h4>
+                        <p>Complete eye care services including vision testing, diagnosis, and treatment of eye diseases.</p>
+                        <a href="#contact" class="btn btn-secondary-custom mt-3">Contact Department</a>
+                    </div>
+                </div>
+
+                <!-- Department 7 -->
+                <div class="department-card">
+                    <div class="department-icon-container">
+                        <i class="fas fa-tooth department-icon"></i>
+                    </div>
+                    <div class="department-info">
+                        <h4>Dentistry</h4>
+                        <p>Comprehensive dental care including preventive, restorative, and cosmetic dentistry.</p>
+                        <a href="#contact" class="btn btn-secondary-custom mt-3">Contact Department</a>
+                    </div>
+                </div>
+
+                <!-- Department 8 -->
+                <div class="department-card">
+                    <div class="department-icon-container">
+                        <i class="fas fa-x-ray department-icon"></i>
+                    </div>
+                    <div class="department-info">
+                        <h4>Radiology</h4>
+                        <p>Advanced imaging services including X-rays, ultrasound, CT scans, and MRI.</p>
+                        <a href="#contact" class="btn btn-secondary-custom mt-3">Contact Department</a>
+                    </div>
+                </div>
+
+                <!-- Department 9 -->
+                <div class="department-card">
+                    <div class="department-icon-container">
+                        <i class="fas fa-flask department-icon"></i>
+                    </div>
+                    <div class="department-info">
+                        <h4>Laboratory Services</h4>
+                        <p>Comprehensive diagnostic testing including blood tests, microbiology, and pathology.</p>
+                        <a href="#contact" class="btn btn-secondary-custom mt-3">Contact Department</a>
+                    </div>
+                </div>
+
+                <!-- Department 10 -->
+                <div class="department-card">
+                    <div class="department-icon-container">
+                        <i class="fas fa-prescription-bottle department-icon"></i>
+                    </div>
+                    <div class="department-info">
+                        <h4>Pharmacy</h4>
+                        <p>Complete pharmaceutical services including medication dispensing and counseling.</p>
+                        <a href="#contact" class="btn btn-secondary-custom mt-3">Contact Department</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Staff Section -->
+    <section id="staff" class="staff-section section-padding">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Our Medical Team</h2>
+                <p>Meet our dedicated healthcare professionals committed to your wellbeing</p>
+            </div>
+
+            <div class="staff-grid" data-aos="fade-up" data-aos-delay="100">
+                <!-- Staff 1 - Benson Ngala -->
+                <div class="staff-card">
+                    <div class="staff-image-container">
+                        <img src="assets/img/doctors/IMG-20250731-WA0021.jpg" alt="Benson Ngala" class="staff-image">
+                    </div>
+                    <div class="staff-info">
+                        <h4>Benson Ngala</h4>
+                        <p class="staff-role">Operations Manager</p>
+                        <p>Provides strategic leadership and ensures Medlead meets its mission across all healthcare departments.</p>
+                        <div class="staff-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Staff 2 - Alice Nyambura -->
+                <div class="staff-card">
+                    <div class="staff-image-container">
+                        <img src="assets/img/doctors/alice nyambura HR.jpg" alt="Alice Nyambura" class="staff-image">
+                    </div>
+                    <div class="staff-info">
+                        <h4>Alice Nyambura</h4>
+                        <p class="staff-role">Human Resource Manager</p>
+                        <p>Oversees talent acquisition, staff welfare, and HR policies that keep Medlead running smoothly.</p>
+                        <div class="staff-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Staff 3 - Frankline Ochieng -->
+                <div class="staff-card">
+                    <div class="staff-image-container">
+                        <img src="assets/img/doctors/IMG-20250731-WA0031.jpg" alt="Frankline Ochieng" class="staff-image">
+                    </div>
+                    <div class="staff-info">
+                        <h4>Frankline Ochieng'</h4>
+                        <p class="staff-role">Finance Manager</p>
+                        <p>Oversees end-to-end finance operations, financial planning, and analysis for sustainable growth.</p>
+                        <div class="staff-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Staff 4 - Marion Echesa -->
+                <div class="staff-card">
+                    <div class="staff-image-container">
+                        <img src="assets/img/doctors/marion.jpg" alt="Marion Echesa" class="staff-image">
+                    </div>
+                    <div class="staff-info">
+                        <h4>Marion Echesa</h4>
+                        <p class="staff-role">Marketing Officer</p>
+                        <p>Leads brand visibility, community outreach, and digital engagement for Medlead Healthcare services.</p>
+                        <div class="staff-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Staff 5 - Isaac Lang'at -->
+                <div class="staff-card">
+                    <div class="staff-image-container">
+                        <img src="assets/img/doctors/lagat.jpg" alt="Isaac Lang'at" class="staff-image">
+                    </div>
+                    <div class="staff-info">
+                        <h4>Isaac Lang'at</h4>
+                        <p class="staff-role">Project Manager</p>
+                        <p>Coordinates healthcare projects and ensures timely delivery of initiatives across Medlead locations.</p>
+                        <div class="staff-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Staff 6 - Gideon Kibet -->
+                <div class="staff-card">
+                    <div class="staff-image-container">
+                        <img src="assets/img/doctors/kibet.jpg" alt="Gideon Kibet" class="staff-image">
+                    </div>
+                    <div class="staff-info">
+                        <h4>Gideon Kibet</h4>
+                        <p class="staff-role">Quality Assurance Manager</p>
+                        <p>Ensures Medlead's healthcare services and supplies meet the highest standards of safety and effectiveness.</p>
+                        <div class="staff-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Staff 7 - Samuel Wafula -->
+                <div class="staff-card">
+                    <div class="staff-image-container">
+                        <img src="assets/img/doctors/samuel.jpg" alt="Samuel Wafula" class="staff-image">
+                    </div>
+                    <div class="staff-info">
+                        <h4>Samuel Wafula</h4>
+                        <p class="staff-role">Supply Chain Officer</p>
+                        <p>Manages medical supplies and procurement for facilities and home-based care solutions.</p>
+                        <div class="staff-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Staff 8 - Catherine Ndirangu -->
+                <div class="staff-card">
+                    <div class="staff-image-container">
+                        <img src="assets/img/doctors/CATHERINE NDIRANGU.jpg" alt="Catherine Ndirangu" class="staff-image">
+                    </div>
+                    <div class="staff-info">
+                        <h4>Catherine Ndirangu</h4>
+                        <p class="staff-role">Nursing Manager (Utawala)</p>
+                        <p>Leads the Utawala nursing team in delivering compassionate and personalized patient care.</p>
+                        <div class="staff-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Staff 9 - Gloria Wanjiku -->
+                <div class="staff-card">
+                    <div class="staff-image-container">
+                        <img src="assets/img/doctors/IMG-20250731-WA0022.jpg" alt="Gloria Wanjiku" class="staff-image">
+                    </div>
+                    <div class="staff-info">
+                        <h4>Gloria Wanjiku</h4>
+                        <p class="staff-role">Nursing Manager (Muthua)</p>
+                        <p>Oversees clinical care and patient support at the Muthua branch with dedication and expertise.</p>
+                        <div class="staff-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Staff 10 - Grace Kithinji -->
+                <div class="staff-card">
+                    <div class="staff-image-container">
+                        <img src="assets/img/doctors/grace.png" alt="Grace Kithinji" class="staff-image">
+                    </div>
+                    <div class="staff-info">
+                        <h4>Grace Kithinji</h4>
+                        <p class="staff-role">Nursing Manager (Karindundu)</p>
+                        <p>Ensures quality and compassionate nursing care in the Karindundu region with excellence.</p>
+                        <div class="staff-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Staff 11 - James Mwanje -->
+                <div class="staff-card">
+                    <div class="staff-image-container">
+                        <img src="assets/img/doctors/itmojeh.jpg" alt="James Mwanje" class="staff-image">
+                    </div>
+                    <div class="staff-info">
+                        <h4>James Mwanje</h4>
+                        <p class="staff-role">IT Manager</p>
+                        <p>Oversees and manages the organization's IT infrastructure and systems for smooth digital operations.</p>
+                        <div class="staff-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5" data-aos="fade-up">
+                <a href="#contact" class="btn btn-primary-custom btn-lg">
+                    <i class="fas fa-users me-2"></i>Contact Our Team
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products-section section-padding">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Medical Products & Equipment</h2>
+                <p>Quality healthcare products for hospitals, clinics, and home care</p>
+            </div>
+
+            <!-- Product Filters -->
+            <div class="gallery-filter" data-aos="fade-up">
+                <button class="filter-btn active" data-filter="all">All Products</button>
+                <button class="filter-btn" data-filter="equipment">Medical Equipment</button>
+                <button class="filter-btn" data-filter="consumable">Consumables</button>
+                <button class="filter-btn" data-filter="monitor">Monitoring Devices</button>
+                <button class="filter-btn" data-filter="lab">Lab Equipment</button>
+                <button class="filter-btn" data-filter="safety">Safety Products</button>
+            </div>
+
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card" data-category="equipment">
+                    <div class="product-image-container">
+                        <img src="assets/img/gallery/Autoclaving machine.jpg" alt="Autoclaving Machine" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h4>Autoclaving Machine</h4>
+                        <div class="product-price">KES 85,000</div>
+                        <button class="whatsapp-btn" data-product="Autoclaving Machine">
+                            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card" data-category="monitor">
+                    <div class="product-image-container">
+                        <img src="assets/img/gallery/Automatic Digital Blood Pressure Monitor.jpg" alt="Automatic Digital Blood Pressure Monitor" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h4>Automatic Digital Blood Pressure Monitor</h4>
+                        <div class="product-price">KES 4,800</div>
+                        <button class="whatsapp-btn" data-product="Automatic Digital Blood Pressure Monitor">
+                            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card" data-category="consumable">
+                    <div class="product-image-container">
+                        <img src="assets/img/gallery/Blood glucose test strips.jpg" alt="Blood Glucose Test Strips" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h4>Blood Glucose Test Strips</h4>
+                        <div class="product-price">KES 1,200 per pack</div>
+                        <button class="whatsapp-btn" data-product="Blood Glucose Test Strips">
+                            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card" data-category="equipment">
+                    <div class="product-image-container">
+                        <img src="assets/img/gallery/Blood Pressure machine.jpg" alt="Blood Pressure Machine" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h4>Blood Pressure Machine</h4>
+                        <div class="product-price">KES 4,500</div>
+                        <button class="whatsapp-btn" data-product="Blood Pressure Machine">
+                            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card" data-category="equipment">
+                    <div class="product-image-container">
+                        <img src="assets/img/gallery/Blood pressure machines.jpg" alt="Blood Pressure Machines" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h4>Blood Pressure Machines (Set)</h4>
+                        <div class="product-price">KES 42,000</div>
+                        <button class="whatsapp-btn" data-product="Blood Pressure Machines (Set)">
+                            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card" data-category="monitor">
+                    <div class="product-image-container">
+                        <img src="assets/img/gallery/Blood pressure monitor.jpg" alt="Blood Pressure Monitor" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h4>Blood Pressure Monitor</h4>
+                        <div class="product-price">KES 3,800</div>
+                        <button class="whatsapp-btn" data-product="Blood Pressure Monitor">
+                            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="product-card" data-category="monitor">
+                    <div class="product-image-container">
+                        <img src="assets/img/gallery/Blood sugar monitor.jpg" alt="Blood Sugar Monitor" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h4>Blood Sugar Monitor</h4>
+                        <div class="product-price">KES 3,200</div>
+                        <button class="whatsapp-btn" data-product="Blood Sugar Monitor">
+                            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="product-card" data-category="monitor">
+                    <div class="product-image-container">
+                        <img src="assets/img/gallery/Blood sugar monitors.jpg" alt="Blood Sugar Monitors" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h4>Blood Sugar Monitors (Set)</h4>
+                        <div class="product-price">KES 28,000</div>
+                        <button class="whatsapp-btn" data-product="Blood Sugar Monitors (Set)">
+                            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 9 -->
+                <div class="product-card" data-category="lab">
+                    <div class="product-image-container">
+                        <img src="assets/img/gallery/Centrifuge machine.jpg" alt="Centrifuge Machine" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h4>Centrifuge Machine</h4>
+                        <div class="product-price">KES 45,000</div>
+                        <button class="whatsapp-btn" data-product="Centrifuge Machine">
+                            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 10 -->
+                <div class="product-card" data-category="consumable">
+                    <div class="product-image-container">
+                        <img src="assets/img/gallery/Clot activator tubes.jpg" alt="Clot Activator Tubes" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h4>Clot Activator Tubes</h4>
+                        <div class="product-price">KES 2,800 per pack</div>
+                        <button class="whatsapp-btn" data-product="Clot Activator Tubes">
+                            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 11 -->
+                <div class="product-card" data-category="monitor">
+                    <div class="product-image-container">
+                        <img src="assets/img/gallery/Digital thermometers.jpg" alt="Digital Thermometers" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h4>Digital Thermometers</h4>
+                        <div class="product-price">KES 1,500</div>
+                        <button class="whatsapp-btn" data-product="Digital Thermometers">
+                            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 12 -->
+                <div class="product-card" data-category="consumable">
+                    <div class="product-image-container">
+                        <img src="assets/img/gallery/Disposable vaccum blood collection tubes.jpg" alt="Disposable Vacuum Blood Collection Tubes" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h4>Disposable Vacuum Blood Collection Tubes</h4>
+                        <div class="product-price">KES 3,200 per pack</div>
+                        <button class="whatsapp-btn" data-product="Disposable Vacuum Blood Collection Tubes">
+                            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 13 -->
+                <div class="product-card" data-category="lab">
+                    <div class="product-image-container">
+                        <img src="assets/img/gallery/Electric centrifuge.jpg" alt="Electric Centrifuge" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h4>Electric Centrifuge</h4>
+                        <div class="product-price">KES 38,000</div>
+                        <button class="whatsapp-btn" data-product="Electric Centrifuge">
+                            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 14 -->
+                <div class="product-card" data-category="monitor">
+                    <div class="product-image-container">
+                        <img src="assets/img/gallery/Electronic blood pressure monitor.jpg" alt="Electronic Blood Pressure Monitor" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h4>Electronic Blood Pressure Monitor</h4>
+                        <div class="product-price">KES 5,200</div>
+                        <button class="whatsapp-btn" data-product="Electronic Blood Pressure Monitor">
+                            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 15 -->
+                <div class="product-card" data-category="equipment">
+                    <div class="product-image-container">
+                        <img src="assets/img/gallery/Examination couch.jpg" alt="Examination Couch" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h4>Examination Couch</h4>
+                        <div class="product-price">KES 25,000</div>
+                        <button class="whatsapp-btn" data-product="Examination Couch">
+                            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 16 -->
+                <div class="product-card" data-category="safety">
+                    <div class="product-image-container">
+                        <img src="assets/img/gallery/First aid kit.jpg" alt="First Aid Kit" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h4>First Aid Kit</h4>
+                        <div class="product-price">KES 5,800</div>
+                        <button class="whatsapp-btn" data-product="First Aid Kit">
+                            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 17 -->
+                <div class="product-card" data-category="consumable">
+                    <div class="product-image-container">
+                        <img src="assets/img/gallery/Gauze drum.jpg" alt="Gauze Drum" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h4>Gauze Drum</h4>
+                        <div class="product-price">KES 1,800</div>
+                        <button class="whatsapp-btn" data-product="Gauze Drum">
+                            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 18 -->
+                <div class="product-card" data-category="consumable">
+                    <div class="product-image-container">
+                        <img src="assets/img/gallery/Gauze rolls.jpg" alt="Gauze Rolls" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h4>Gauze Rolls</h4>
+                        <div class="product-price">KES 950 per pack</div>
+                        <button class="whatsapp-btn" data-product="Gauze Rolls">
+                            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 19 -->
+                <div class="product-card" data-category="consumable">
+                    <div class="product-image-container">
+                        <img src="assets/img/gallery/Glucometer strips.jpg" alt="Glucometer Strips" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h4>Glucometer Strips</h4>
+                        <div class="product-price">KES 1,400 per pack</div>
+                        <button class="whatsapp-btn" data-product="Glucometer Strips">
+                            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 20 -->
+                <div class="product-card" data-category="consumable">
+                    <div class="product-image-container">
+                        <img src="assets/img/gallery/H.pylori test strips.jpg" alt="H.pylori Test Strips" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h4>H.pylori Test Strips</h4>
+                        <div class="product-price">KES 1,800 per pack</div>
+                        <button class="whatsapp-btn" data-product="H.pylori Test Strips">
+                            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 21 -->
+                <div class="product-card" data-category="consumable">
+                    <div class="product-image-container">
+                        <img src="assets/img/gallery/Hb Hemoglobin Test strips.jpg" alt="Hb Hemoglobin Test Strips" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h4>Hb Hemoglobin Test Strips</h4>
+                        <div class="product-price">KES 2,200 per pack</div>
+                        <button class="whatsapp-btn" data-product="Hb Hemoglobin Test Strips">
+                            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 22 -->
+                <div class="product-card" data-category="equipment">
+                    <div class="product-image-container">
+                        <img src="assets/img/gallery/Hb machines.jpg" alt="Hb Machines" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h4>Hb Machines</h4>
+                        <div class="product-price">KES 35,000</div>
+                        <button class="whatsapp-btn" data-product="Hb Machines">
+                            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 23 -->
+                <div class="product-card" data-category="equipment">
+                    <div class="product-image-container">
+                        <img src="assets/img/gallery/Hb machine.jpg" alt="Hb Machine" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h4>Hb Machine</h4>
+                        <div class="product-price">KES 32,000</div>
+                        <button class="whatsapp-btn" data-product="Hb Machine">
+                            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 24 -->
+                <div class="product-card" data-category="monitor">
+                    <div class="product-image-container">
+                        <img src="assets/img/gallery/Infrared Thermometers.jpg" alt="Infrared Thermometers" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h4>Infrared Thermometers</h4>
+                        <div class="product-price">KES 2,500</div>
+                        <button class="whatsapp-btn" data-product="Infrared Thermometers">
+                            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 25 -->
+                <div class="product-card" data-category="safety">
+                    <div class="product-image-container">
+                        <img src="assets/img/gallery/Lab coat.jpg" alt="Lab Coat" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h4>Lab Coat</h4>
+                        <div class="product-price">KES 2,200</div>
+                        <button class="whatsapp-btn" data-product="Lab Coat">
+                            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 26 -->
+                <div class="product-card" data-category="consumable">
+                    <div class="product-image-container">
+                        <img src="assets/img/gallery/Malaria rapid diagnostic test kits.jpg" alt="Malaria Rapid Diagnostic Test Kits" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h4>Malaria Rapid Diagnostic Test Kits</h4>
+                        <div class="product-price">KES 1,500 per pack</div>
+                        <button class="whatsapp-btn" data-product="Malaria Rapid Diagnostic Test Kits">
+                            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 27 -->
+                <div class="product-card" data-category="consumable">
+                    <div class="product-image-container">
+                        <img src="assets/img/gallery/Malaria test kits.jpg" alt="Malaria Test Kits" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h4>Malaria Test Kits</h4>
+                        <div class="product-price">KES 1,400 per pack</div>
+                        <button class="whatsapp-btn" data-product="Malaria Test Kits">
+                            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 28 -->
+                <div class="product-card" data-category="consumable">
+                    <div class="product-image-container">
+                        <img src="assets/img/gallery/Micro Tube EDTA K3 Blood collection tubes.jpg" alt="Micro Tube EDTA K3 Blood Collection Tubes" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h4>Micro Tube EDTA K3 Blood Collection Tubes</h4>
+                        <div class="product-price">KES 2,900 per pack</div>
+                        <button class="whatsapp-btn" data-product="Micro Tube EDTA K3 Blood Collection Tubes">
+                            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 29 -->
+                <div class="product-card" data-category="consumable">
+                    <div class="product-image-container">
+                        <img src="assets/img/gallery/Microscope slides.jpg" alt="Microscope Slides" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h4>Microscope Slides</h4>
+                        <div class="product-price">KES 1,800 per box</div>
+                        <button class="whatsapp-btn" data-product="Microscope Slides">
+                            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 30 -->
+                <div class="product-card" data-category="lab">
+                    <div class="product-image-container">
+                        <img src="assets/img/gallery/Microscopes.jpg" alt="Microscopes" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h4>Microscopes</h4>
+                        <div class="product-price">KES 85,000</div>
+                        <button class="whatsapp-btn" data-product="Microscopes">
+                            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 31 -->
+                <div class="product-card" data-category="consumable">
+                    <div class="product-image-container">
+                        <img src="assets/img/gallery/Multiple Mid-Upper Arm Circumference (MUAC) tapes.jpg" alt="MUAC Tapes" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h4>MUAC Tapes</h4>
+                        <div class="product-price">KES 800 per pack</div>
+                        <button class="whatsapp-btn" data-product="MUAC Tapes">
+                            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 32 -->
+                <div class="product-card" data-category="equipment">
+                    <div class="product-image-container">
+                        <img src="assets/img/gallery/Nebulizer compressor.jpg" alt="Nebulizer Compressor" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h4>Nebulizer Compressor</h4>
+                        <div class="product-price">KES 12,000</div>
+                        <button class="whatsapp-btn" data-product="Nebulizer Compressor">
+                            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 33 -->
+                <div class="product-card" data-category="equipment">
+                    <div class="product-image-container">
+                        <img src="assets/img/gallery/Nursing trolleys.jpg" alt="Nursing Trolleys" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h4>Nursing Trolleys</h4>
+                        <div class="product-price">KES 18,000</div>
+                        <button class="whatsapp-btn" data-product="Nursing Trolleys">
+                            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 34 -->
+                <div class="product-card" data-category="consumable">
+                    <div class="product-image-container">
+                        <img src="assets/img/gallery/Polypots.jpg" alt="Polypots" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h4>Polypots</h4>
+                        <div class="product-price">KES 1,200 per pack</div>
+                        <button class="whatsapp-btn" data-product="Polypots">
+                            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 35 -->
+                <div class="product-card" data-category="monitor">
+                    <div class="product-image-container">
+                        <img src="assets/img/gallery/Pulse oximeters.jpg" alt="Pulse Oximeters" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h4>Pulse Oximeters</h4>
+                        <div class="product-price">KES 2,800</div>
+                        <button class="whatsapp-btn" data-product="Pulse Oximeters">
+                            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 36 -->
+                <div class="product-card" data-category="consumable">
+                    <div class="product-image-container">
+                        <img src="assets/img/gallery/Rheumatoid Factor slide latex kit.jpg" alt="Rheumatoid Factor Slide Latex Kit" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h4>Rheumatoid Factor Slide Latex Kit</h4>
+                        <div class="product-price">KES 3,500</div>
+                        <button class="whatsapp-btn" data-product="Rheumatoid Factor Slide Latex Kit">
+                            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 37 -->
+                <div class="product-card" data-category="lab">
+                    <div class="product-image-container">
+                        <img src="assets/img/gallery/Roller mixer.jpg" alt="Roller Mixer" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h4>Roller Mixer</h4>
+                        <div class="product-price">KES 22,000</div>
+                        <button class="whatsapp-btn" data-product="Roller Mixer">
+                            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 38 -->
+                <div class="product-card" data-category="safety">
+                    <div class="product-image-container">
+                        <img src="assets/img/gallery/Safety boxes.jpg" alt="Safety Boxes" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h4>Safety Boxes</h4>
+                        <div class="product-price">KES 1,200</div>
+                        <button class="whatsapp-btn" data-product="Safety Boxes">
+                            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 39 -->
+                <div class="product-card" data-category="consumable">
+                    <div class="product-image-container">
+                        <img src="assets/img/gallery/Salmonella test strips.jpg" alt="Salmonella Test Strips" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h4>Salmonella Test Strips</h4>
+                        <div class="product-price">KES 2,100 per pack</div>
+                        <button class="whatsapp-btn" data-product="Salmonella Test Strips">
+                            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 40 -->
+                <div class="product-card" data-category="equipment">
+                    <div class="product-image-container">
+                        <img src="assets/img/gallery/Stethoscopes.jpg" alt="Stethoscopes" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h4>Stethoscopes</h4>
+                        <div class="product-price">KES 3,500</div>
+                        <button class="whatsapp-btn" data-product="Stethoscopes">
+                            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 41 -->
+                <div class="product-card" data-category="equipment">
+                    <div class="product-image-container">
+                        <img src="assets/img/gallery/Stethoscope.jpg" alt="Stethoscope" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h4>Stethoscope</h4>
+                        <div class="product-price">KES 2,800</div>
+                        <button class="whatsapp-btn" data-product="Stethoscope">
+                            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 42 -->
+                <div class="product-card" data-category="consumable">
+                    <div class="product-image-container">
+                        <img src="assets/img/gallery/Tourniquets.jpg" alt="Tourniquets" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h4>Tourniquets</h4>
+                        <div class="product-price">KES 1,500 per pack</div>
+                        <button class="whatsapp-btn" data-product="Tourniquets">
+                            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 43 -->
+                <div class="product-card" data-category="consumable">
+                    <div class="product-image-container">
+                        <img src="assets/img/gallery/Urinalysis strips.jpg" alt="Urinalysis Strips" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h4>Urinalysis Strips</h4>
+                        <div class="product-price">KES 2,300 per pack</div>
+                        <button class="whatsapp-btn" data-product="Urinalysis Strips">
+                            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 44 -->
+                <div class="product-card" data-category="consumable">
+                    <div class="product-image-container">
+                        <img src="assets/img/gallery/Vacutainer tubes.jpg" alt="Vacutainer Tubes" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h4>Vacutainer Tubes</h4>
+                        <div class="product-price">KES 2,500 per pack</div>
+                        <button class="whatsapp-btn" data-product="Vacutainer Tubes">
+                            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 45 -->
+                <div class="product-card" data-category="consumable">
+                    <div class="product-image-container">
+                        <img src="assets/img/gallery/Vacuum blood collection tubes (2).jpg" alt="Vacuum Blood Collection Tubes" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h4>Vacuum Blood Collection Tubes (Type 2)</h4>
+                        <div class="product-price">KES 2,700 per pack</div>
+                        <button class="whatsapp-btn" data-product="Vacuum Blood Collection Tubes (Type 2)">
+                            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 46 -->
+                <div class="product-card" data-category="consumable">
+                    <div class="product-image-container">
+                        <img src="assets/img/gallery/Vacuum blood collection tubes (4).jpg" alt="Vacuum Blood Collection Tubes (4)" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h4>Vacuum Blood Collection Tubes (Type 4)</h4>
+                        <div class="product-price">KES 2,900 per pack</div>
+                        <button class="whatsapp-btn" data-product="Vacuum Blood Collection Tubes (Type 4)">
+                            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 47 -->
+                <div class="product-card" data-category="consumable">
+                    <div class="product-image-container">
+                        <img src="assets/img/gallery/Vacuum blood collection tubes (5).jpg" alt="Vacuum Blood Collection Tubes (5)" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h4>Vacuum Blood Collection Tubes (Type 5)</h4>
+                        <div class="product-price">KES 3,100 per pack</div>
+                        <button class="whatsapp-btn" data-product="Vacuum Blood Collection Tubes (Type 5)">
+                            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 48 -->
+                <div class="product-card" data-category="consumable">
+                    <div class="product-image-container">
+                        <img src="assets/img/gallery/Vacuum blood collection tubes (Blue).jpg" alt="Vacuum Blood Collection Tubes (Blue)" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h4>Vacuum Blood Collection Tubes (Blue)</h4>
+                        <div class="product-price">KES 3,000 per pack</div>
+                        <button class="whatsapp-btn" data-product="Vacuum Blood Collection Tubes (Blue)">
+                            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 49 -->
+                <div class="product-card" data-category="consumable">
+                    <div class="product-image-container">
+                        <img src="assets/img/gallery/Vacuum blood collection tubes (Red).jpg" alt="Vacuum Blood Collection Tubes (Red)" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h4>Vacuum Blood Collection Tubes (Red)</h4>
+                        <div class="product-price">KES 2,600 per pack</div>
+                        <button class="whatsapp-btn" data-product="Vacuum Blood Collection Tubes (Red)">
+                            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 50 -->
+                <div class="product-card" data-category="consumable">
+                    <div class="product-image-container">
+                        <img src="assets/img/gallery/Vacuum blood collection tubes (Yellow).jpg" alt="Vacuum Blood Collection Tubes (Yellow)" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h4>Vacuum Blood Collection Tubes (Yellow)</h4>
+                        <div class="product-price">KES 2,800 per pack</div>
+                        <button class="whatsapp-btn" data-product="Vacuum Blood Collection Tubes (Yellow)">
+                            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 51 -->
+                <div class="product-card" data-category="consumable">
+                    <div class="product-image-container">
+                        <img src="assets/img/gallery/Vacuum blood collection tubes.jpg" alt="Vacuum Blood Collection Tubes" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h4>Vacuum Blood Collection Tubes</h4>
+                        <div class="product-price">KES 2,400 per pack</div>
+                        <button class="whatsapp-btn" data-product="Vacuum Blood Collection Tubes">
+                            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 52 -->
+                <div class="product-card" data-category="safety">
+                    <div class="product-image-container">
+                        <img src="assets/img/gallery/Waste bins.jpg" alt="Waste Bins" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h4>Waste Bins</h4>
+                        <div class="product-price">KES 4,500</div>
+                        <button class="whatsapp-btn" data-product="Waste Bins">
+                            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 53 -->
+                <div class="product-card" data-category="consumable">
+                    <div class="product-image-container">
+                        <img src="assets/img/gallery/One step rapid test strip.jpg" alt="One Step Rapid Test Strip" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h4>One Step Rapid Test Strip</h4>
+                        <div class="product-price">KES 1,900 per pack</div>
+                        <button class="whatsapp-btn" data-product="One Step Rapid Test Strip">
+                            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 54 -->
+                <div class="product-card" data-category="equipment">
+                    <div class="product-image-container">
+                        <img src="assets/img/gallery/Operation table.jpg" alt="Operation Table" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h4>Operation Table</h4>
+                        <div class="product-price">KES 95,000</div>
+                        <button class="whatsapp-btn" data-product="Operation Table">
+                            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 55 -->
+                <div class="product-card" data-category="consumable">
+                    <div class="product-image-container">
+                        <img src="assets/img/gallery/IMG-20250731-WA0134.jpg" alt="Medical Product" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h4>Medical Product WA0134</h4>
+                        <div class="product-price">KES 3,500</div>
+                        <button class="whatsapp-btn" data-product="Medical Product WA0134">
+                            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 56 -->
+                <div class="product-card" data-category="consumable">
+                    <div class="product-image-container">
+                        <img src="assets/img/gallery/Singe use blood collection tubes.jpg" alt="Single Use Blood Collection Tubes" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h4>Single Use Blood Collection Tubes</h4>
+                        <div class="product-price">KES 2,300 per pack</div>
+                        <button class="whatsapp-btn" data-product="Single Use Blood Collection Tubes">
+                            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 57 -->
+                <div class="product-card" data-category="equipment">
+                    <div class="product-image-container">
+                        <img src="assets/img/gallery/URS.jpg" alt="URS" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h4>URS Medical Equipment</h4>
+                        <div class="product-price">KES 65,000</div>
+                        <button class="whatsapp-btn" data-product="URS Medical Equipment">
+                            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 58 -->
+                <div class="product-card" data-category="consumable">
+                    <div class="product-image-container">
+                        <img src="assets/img/gallery/IMG-20250731-WA0122.jpg" alt="Medical Product WA0122" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h4>Medical Product WA0122</h4>
+                        <div class="product-price">KES 2,800</div>
+                        <button class="whatsapp-btn" data-product="Medical Product WA0122">
+                            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+            
+            <div class="text-center mt-5" data-aos="fade-up">
+                <a href="#contact" class="btn btn-primary-custom btn-lg">
+                    <i class="fas fa-box-open me-2"></i>Contact for More Products
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section section-padding">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2 class="text-white">Contact Us</h2>
+                <p class="text-white">Get in touch for quality healthcare solutions</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="contact-form-container">
+                        <h3>Send us a Message</h3>
+                        <form id="contactForm">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Your Name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control" placeholder="Your Email" required>
+                                </div>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Subject" required>
+                            <input type="tel" class="form-control" placeholder="Phone Number" required>
+                            <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                            <button type="submit" class="btn btn-primary-custom w-100">
+                                <i class="fas fa-paper-plane me-2"></i>Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="contact-info">
+                        <!-- Contact 1 -->
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Our Location</h4>
+                                <p>Head Office: Nairobi, Kenya</p>
+                                <p>Branches: Utawala, Muthua, Karindundu</p>
+                            </div>
+                        </div>
+
+                        <!-- Contact 2 -->
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Call Us</h4>
+                                <p>General Inquiries: +254 793 285 847</p>
+                                <p>Emergency: +254 790 055 027</p>
+                            </div>
+                        </div>
+
+                        <!-- Contact 3 -->
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4>Email Us</h4>
+                                <p>medleadhealthcareltd@gmail.com</p>
+                                <p>orders@medleadhealthcare.co.ke</p>
+                            </div>
+                        </div>
+
+                        <!-- Contact 4 -->
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4>Working Hours</h4>
+                                <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
+                                <p>Saturday: 9:00 AM - 4:00 PM</p>
+                                <p>Emergency Services: 24/7</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row">
+                <!-- Company Info -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="footer-logo">
+                        <img src="assets/img/LOGO_H-removebg-preview.png" alt="Medlead Logo">
+                        <div class="footer-brand">
+                            <h3>Medlead Healthcare Ltd</h3>
+                            <p>Quality Healthcare Solutions</p>
+                        </div>
+                    </div>
+                    <p class="mt-3">
+                        Providing reliable medical supplies, home-based care, and diagnostic services across Kenya with compassion and excellence.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <div class="footer-links">
+                        <h5>Quick Links</h5>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#departments">Departments</a></li>
+                            <li><a href="#products">Products</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Services -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="footer-links">
+                        <h5>Our Services</h5>
+                        <ul>
+                            <li><a href="#services">Pharmaceutical Services</a></li>
+                            <li><a href="#services">Home-Based Care</a></li>
+                            <li><a href="#services">Diagnostic Services</a></li>
+                            <li><a href="#services">Medical Equipment Supply</a></li>
+                            <li><a href="#services">Emergency Services</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="footer-links">
+                        <h5>Newsletter</h5>
+                        <p>Subscribe to our newsletter for health tips and updates.</p>
+                        <div class="footer-newsletter mt-3">
+                            <div class="input-group">
+                                <input type="email" class="form-control" placeholder="Your email">
+                                <button class="btn btn-primary" type="button">
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="footer-bottom">
+                <p>&copy; 2025 Medlead Healthcare Ltd. All Rights Reserved.</p>
+                <p>Designed with <i class="fas fa-heart text-danger"></i> for better healthcare in Kenya</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.main-header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+
+            // Show/hide scroll to top button
+            const scrollTop = document.querySelector('.scroll-top');
+            if (window.scrollY > 300) {
+                scrollTop.classList.add('show');
+            } else {
+                scrollTop.classList.remove('show');
+            }
+        });
+
+        // Mobile menu toggle - FIXED
+        const navbarToggler = document.getElementById('navbarToggler');
+        const navLinks = document.getElementById('navLinks');
+        const navbarOverlay = document.getElementById('navbarOverlay');
+
+        navbarToggler.addEventListener('click', function(e) {
+            e.stopPropagation();
+            navLinks.classList.toggle('active');
+            navbarOverlay.classList.toggle('active');
+            document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+        });
+
+        navbarOverlay.addEventListener('click', function() {
+            navLinks.classList.remove('active');
+            navbarOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+
+        // Close mobile menu when clicking on links
+        document.querySelectorAll('.nav-link, .emergency-contact').forEach(link => {
+            link.addEventListener('click', function() {
+                navLinks.classList.remove('active');
+                navbarOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!navLinks.contains(e.target) && !navbarToggler.contains(e.target) && navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                navbarOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Nav link active state
+        const sections = document.querySelectorAll('section');
+
+        function updateActiveNavLink() {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.scrollY >= (sectionTop - 100)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', updateActiveNavLink);
+        updateActiveNavLink(); // Initial call
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                if (this.getAttribute('href') === '#') return;
+                
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Product filtering
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const productCards = document.querySelectorAll('.product-card');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                const filterValue = this.getAttribute('data-filter');
+                
+                productCards.forEach(card => {
+                    if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                        card.style.display = 'block';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        }, 50);
+                    } else {
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateY(10px)';
+                        setTimeout(() => {
+                            card.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // WhatsApp order buttons
+        document.querySelectorAll('.whatsapp-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const productName = this.getAttribute('data-product');
+                const message = `Hello Medlead Healthcare! I'm interested in ${productName}. Please provide more details and pricing.`;
+                const phoneNumber = '254790055027';
+                const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                window.open(whatsappURL, '_blank');
+            });
+        });
+
+        // Contact form submission
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form data
+                const formData = new FormData(this);
+                const formObject = {};
+                formData.forEach((value, key) => {
+                    formObject[key] = value;
+                });
+                
+                // Here you would typically send the data to a server
+                console.log('Form submitted:', formObject);
+                
+                // Show success message
+                alert('Thank you for your message! We will contact you soon.');
+                this.reset();
+            });
+        }
+
+        // Animated counters
+        function animateCounter(element) {
+            const target = parseInt(element.getAttribute('data-count'));
+            const duration = 1500; // 1.5 seconds
+            const increment = target / (duration / 16); // 60fps
+            let current = 0;
+            
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                element.textContent = Math.floor(current);
+            }, 16);
+        }
+
+        // Intersection Observer for counters
+        const observerOptions = {
+            threshold: 0.3
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counters = entry.target.querySelectorAll('.stat-number');
+                    counters.forEach(counter => {
+                        if (!counter.classList.contains('animated')) {
+                            counter.classList.add('animated');
+                            animateCounter(counter);
+                        }
+                    });
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Observe the stats section
+        const statsSection = document.querySelector('.about-section');
+        if (statsSection) {
+            observer.observe(statsSection);
+        }
+
+        // Scroll to top button
+        document.querySelector('.scroll-top').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Emergency button animation
+        const emergencyBtn = document.querySelector('.btn-emergency');
+        if (emergencyBtn) {
+            emergencyBtn.addEventListener('mouseenter', function() {
+                this.style.animation = 'pulse 0.8s infinite';
+            });
+            
+            emergencyBtn.addEventListener('mouseleave', function() {
+                this.style.animation = 'pulse 2s infinite';
+            });
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add loading animation to page
+            document.body.style.opacity = '0';
+            setTimeout(() => {
+                document.body.style.transition = 'opacity 0.5s ease';
+                document.body.style.opacity = '1';
+            }, 100);
+            
+            // Prevent zoom on mobile
+            document.addEventListener('touchstart', function(e) {
+                if (e.touches.length > 1) {
+                    e.preventDefault();
+                }
+            }, { passive: false });
+            
+            let lastTouchEnd = 0;
+            document.addEventListener('touchend', function(e) {
+                const now = (new Date()).getTime();
+                if (now - lastTouchEnd <= 300) {
+                    e.preventDefault();
+                }
+                lastTouchEnd = now;
+            }, false);
+        });
+
+        // Window resize handler
+        window.addEventListener('resize', function() {
+            // Close mobile menu on resize to larger screens
+            if (window.innerWidth > 992) {
+                navLinks.classList.remove('active');
+                navbarOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    </script>
+</body>
+</html>
